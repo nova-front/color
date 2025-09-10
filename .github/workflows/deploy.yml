@@ -39,8 +39,8 @@ jobs:
 
     - name: Install dependencies
       run: |
-        pnpm install --frozen-lockfile
-        cd demo && pnpm install --frozen-lockfile
+        pnpm install --no-frozen-lockfile
+        cd demo && pnpm install --no-frozen-lockfile
 
     - name: Build color system
       run: pnpm run build
