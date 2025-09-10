@@ -2,11 +2,12 @@
   "compilerOptions": {
     "target": "ES2020",
     "module": "CommonJS",
-    "rootDir": "./src",
     "outDir": "./dist",
     "esModuleInterop": true,
     "skipLibCheck": true,
     "forceConsistentCasingInFileNames": true,
     "strict": true
-  }
+  },
+  "include": ["src/**/*", "scripts/**/*"],
+  "exclude": ["demo/**/*", "node_modules", "dist"]
 }

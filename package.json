@@ -5,13 +5,13 @@
   "main": "index.js",
   "scripts": {
     "clean": "rimraf dist",
-    "build": "npm run clean & ts-node scripts/system.ts",
-    "prepublishOnly": "npm run build",
+    "build": "pnpm run clean && ts-node scripts/system.ts",
+    "prepublishOnly": "pnpm run build",
     "check:build": "ls -la dist/system/",
-    "check:publish": "npm pack --dry-run",
-    "release:patch": "npm version patch && npm publish",
-    "release:minor": "npm version minor && npm publish",
-    "release:major": "npm version major && npm publish",
+    "check:publish": "pnpm pack --dry-run",
+    "release:patch": "pnpm version patch && pnpm publish",
+    "release:minor": "pnpm version minor && pnpm publish",
+    "release:major": "pnpm version major && pnpm publish",
     "check:pre-publish": "node scripts/check-publish.js"
   },
   "files": [

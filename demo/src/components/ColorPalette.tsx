@@ -7,7 +7,6 @@ interface ColorPaletteProps {
 
 const ColorPalette = ({ colorName }: ColorPaletteProps) => {
   const [copiedIndex, setCopiedIndex] = useState<number | null>(null)
-  const [hoveredIndex, setHoveredIndex] = useState<number | null>(null)
 
   const copyToClipboard = async (colorVar: string, index: number) => {
     try {
@@ -56,8 +55,6 @@ const ColorPalette = ({ colorName }: ColorPaletteProps) => {
               className={`color-swatch ${isPrimary ? 'primary' : ''}`}
               style={{ backgroundColor: `var(${colorVar})` }}
               onClick={() => copyToClipboard(colorVar, index)}
-              onMouseEnter={() => setHoveredIndex(index)}
-              onMouseLeave={() => setHoveredIndex(null)}
               title={`点击复制 ${colorVar}`}
             >
               <div className="swatch-content">
